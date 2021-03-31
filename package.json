@@ -1,0 +1,12 @@
+{
+    "name": "introsite",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "start:dev": "nodemon server.js"
+    },
+    "author": "Avi E. Koenig",
+    "license": "ISC"
+}
