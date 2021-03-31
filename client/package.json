@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build  --dest ../backend/public"
+        "build": "npm i && vue-cli-service build  --dest ../backend/public"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.35",
