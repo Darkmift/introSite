@@ -1,3 +1,4 @@
+const fs = require('fs');
 const cors = require('cors');
 const path = require('path');
 const express = require('express');
@@ -13,8 +14,13 @@ const corsOptions = {
     credentials: true,
 };
 
-const publicDir = path.resolve(__dirname, 'public');
-app.use(express.static(publicDir));
+const publicDir = './public';
+if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir);
+}
+
+const publicDirPath = path.resolve(__dirname, 'public');
+app.use(express.static(publicDirPath));
 
 if (process.env.NODE_ENV !== 'production') {
     app.use(cors(corsOptions));
