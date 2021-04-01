@@ -2,6 +2,7 @@ const fs = require('fs');
 const cors = require('cors');
 const path = require('path');
 const express = require('express');
+const history = require('connect-history-api-fallback');
 const { errorHandler } = require('./middleware/errorHandler.middleware');
 const Logger = require('./services/logger.service');
 const app = express();
@@ -13,6 +14,12 @@ const corsOptions = {
     origin: ['http://127.0.0.1:8080', 'http://localhost:8080'],
     credentials: true,
 };
+app.use(
+    history({
+        // OPTIONAL: Includes more verbose logging
+        verbose: true,
+    })
+);
 
 const publicDir = './public';
 if (!fs.existsSync(publicDir)) {
