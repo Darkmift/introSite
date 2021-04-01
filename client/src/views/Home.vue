@@ -1,11 +1,15 @@
 <template>
-	<div class="home flex j-center a-center">Home</div>
+	<div class="home flex columns a-center">
+		<specialities />
+	</div>
 </template>
 
 
 
 <script>
+import specialities from "../components/Specialties";
 export default {
 	name: "Home",
+	components: { specialities },
 };
 </script>
