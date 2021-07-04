@@ -1,26 +1,21 @@
 <template>
 	<nav class="navbar" :class="{ 'fixed-top-black': scrollY > 200 }">
 		<div class="container flex j-around a-center">
-			<a class="navbar-brand" @click="scrollTo('navbar')"
-				>Meet Me</a
-			>
+			<a class="navbar-brand" @click="scrollTo('navbar')">Meet Me</a>
 
 			<ul class="links flex j-around">
 				<li class="nav-item">
-					<a class="nav-link" @click="scrollTo('services')"
-						>Specialities</a
-					>
+					<a class="nav-link" @click="scrollTo('services')">Specialities</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" @click="scrollTo('portfolio')"
-						>Portfolio</a
-					>
+					<a class="nav-link" @click="scrollTo('portfolio')">Portfolio</a>
 				</li>
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a class="nav-link" @click="scrollTo('me')">Me</a>
-				</li>
+				</li> -->
 				<li class="nav-item">
-					<a class="nav-link" @click="scrollTo('contact')">Contact</a>
+					<a class="nav-link" href="mailto:avi@koenig.co.il" target="_blank">Contact</a>
+					<!-- <a class="nav-link" @click="scrollTo('contact')">Contact</a> -->
 				</li>
 			</ul>
 
@@ -29,7 +24,7 @@
 				type="button"
 				@click="scrollTo('navbar')"
 			>
-				<font-awesome-icon :icon="['fas', 'bars']" />
+				<i class="fas fa-bars"></i>
 			</button>
 		</div>
 	</nav>
@@ -154,7 +149,6 @@ export default {
 	},
 	methods: {
 		scrollTo(target) {
-			console.log(target);
 			this.$scrollTo(".home", 500, {});
 		},
 	},

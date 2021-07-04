@@ -35,8 +35,7 @@
 			font-style: italic;
 			line-height: 22px;
 			margin-bottom: 25px;
-			font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial,
-				sans-serif;
+			font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		}
 
 		.intro-heading {
@@ -44,8 +43,7 @@
 			font-weight: 700;
 			line-height: 75px;
 			margin-bottom: 50px;
-			font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial,
-				sans-serif;
+			font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 			text-transform: uppercase;
 		}
 	}

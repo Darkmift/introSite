@@ -1,9 +1,9 @@
 <template>
 	<div id="app">
-		<!-- <app-nav-bar /> -->
 		<app-header />
 
 		<router-view class="page" />
+		<app-footer />
 	</div>
 </template>
 
@@ -11,12 +11,14 @@
 .page {
 	padding-top: 150px;
 	height: 100vh;
+	margin-bottom: 20vh;
 }
 </style>
 
 <script>
 import AppNavBar from "./components/Navbar";
 import AppHeader from "./components/Header";
+import AppFooter from "./components/AppFooter.vue";
 export default {
 	methods: {
 		updateScroll() {
@@ -33,6 +35,6 @@ export default {
 	destroy() {
 		window.removeEventListener("scroll", this.updateScroll);
 	},
-	components: { AppNavBar, AppHeader },
+	components: { AppNavBar, AppHeader, AppFooter },
 };
 </script>
