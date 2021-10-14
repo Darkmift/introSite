@@ -10,7 +10,6 @@
 <style lang="scss">
 .page {
 	padding-top: 150px;
-	height: 100vh;
 	margin-bottom: 20vh;
 }
 </style>

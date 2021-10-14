@@ -62,7 +62,6 @@
 	font-family: $Montserrat !important;
 	text-align: center;
 	padding: 2vh;
-	position: fixed;
 	bottom: 0;
 	width: 100%;
 
