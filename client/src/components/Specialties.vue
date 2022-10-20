@@ -80,7 +80,8 @@
 		flex-direction: column;
 	}
 
-	@include for-normal-layout {
+	@media (min-width: $break-normal-wide) {
+		@include for-normal-layout;
 		.card-container {
 			flex-direction: row;
 			padding-bottom: 7vh;
