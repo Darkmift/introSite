@@ -48,7 +48,8 @@
 		}
 	}
 
-	@include for-normal-layout {
+	@media (min-width: $break-normal-wide) {
+		@include for-normal-layout;
 		.intro-text {
 			padding-top: 300px;
 			padding-bottom: 200px;
