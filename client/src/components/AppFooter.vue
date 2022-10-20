@@ -25,24 +25,12 @@
 		<!-- Social media icons line Start -->
 
 		<div class="sm-handle">
-			<a href="#" class="sm-button">
-				<i class="fab fa-instagram"></i>
-			</a>
-			<a href="#" class="sm-button">
-				<i class="fab fa-linkedin"> </i>
-			</a>
-
-			<a href="#" class="sm-button">
-				<i class="fab fa-facebook-f"> </i>
-			</a>
-
-			<a href="#" class="sm-button">
-				<i class="fab fa-twitter"> </i>
-			</a>
-
-			<a href="#" class="sm-button">
-				<i class="fab fa-github"> </i>
-			</a>
+			<social-link
+				v-for="(social, index) in socials"
+				:key="index"
+				:url="social.url"
+				:iconName="'fa-' + social.icon"
+			/>
 		</div>
 
 		<!-- copyright area -->
@@ -145,10 +133,36 @@
 </style>
 
 <script>
+import SocialLink from "./SocialLink.vue";
 export default {
 	name: "App-Footer",
+	components: { SocialLink },
 	data() {
-		return { year: new Date().getFullYear() };
+		return {
+			year: new Date().getFullYear(),
+			socials: [
+				{
+					url: "https://www.linkedin.com/in/avi-koenig-67159620b/",
+					icon: "linkedin",
+				},
+				{
+					url: "https://github.com/Darkmift",
+					icon: "github",
+				},
+				{
+					url: "https://twitter.com/",
+					icon: "twitter",
+				},
+				{
+					url: "https://www.instagram.com/",
+					icon: "instagram",
+				},
+				{
+					url: "https://www.facebook.com/",
+					icon: "facebook-f",
+				},
+			],
+		};
 	},
 };
 </script>
