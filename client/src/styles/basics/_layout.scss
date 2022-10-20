@@ -26,21 +26,21 @@
     display: grid;
 }
 
-@include for-normal-layout {
+@mixin for-normal-layout {
     grid-template-columns:
         minmax(2rem, 1fr)
         minmax(auto, $break-normal)
         minmax(2rem, 1fr);
 }
 
-@include for-wide-layout {
+@mixin for-wide-layout {
     grid-template-columns:
         minmax(2rem, 1fr)
         minmax(auto, $break-wide)
         minmax(2rem, 1fr);
 }
 
-@include for-mobile-layout {
+@mixin for-mobile-layout {
     .category-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
