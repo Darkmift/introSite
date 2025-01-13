@@ -12,6 +12,13 @@
       "cwd": "${workspaceFolder}"
     },
     {
+      "command": "npm run storybook",
+      "name": "Run Storybook",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
       "command": "npm run test",
       "name": "Run Test:unit",
       "request": "launch",
