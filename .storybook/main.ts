@@ -7,7 +7,8 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
-    "@storybook/addon-styling", // line for tailwind
+    "@storybook/addon-styling-webpack",
+    "@storybook/addon-themes",
     'storybook-dark-mode'
   ],
   framework: {
