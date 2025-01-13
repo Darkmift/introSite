@@ -9,7 +9,7 @@ const explicitTheme: ThemeInput = {
 
 const Calendar = () => (
   <GitHubCalendar
-    username="soumyajit4419"
+    username="Darkmift"
     blockSize={15}
     blockMargin={5}
     theme={explicitTheme}
