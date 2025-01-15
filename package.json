@@ -22,6 +22,7 @@
     "react-dom": "^19.0.0",
     "react-github-calendar": "^4.5.3",
     "react-icons": "^5.4.0",
+    "react-parallax-tilt": "^1.7.272",
     "react-simple-typewriter": "^5.0.1",
     "storybook-dark-mode": "^4.0.2",
     "tailwind-merge": "^2.5.5"

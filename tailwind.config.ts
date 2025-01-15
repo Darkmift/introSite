@@ -107,6 +107,7 @@ const config = {
       backgroundImage: {
         'section-gradient': 'linear-gradient(to bottom left, rgba(17, 16, 16, 0.582), rgba(12, 8, 24, 0.904))',
         'image-gradient': 'linear-gradient(to bottom left, rgba(17, 16, 16, 0.678), rgba(12, 10, 22, 0.863))',
+        'home-section': 'url("/home-bg.jpg")',
       },
       boxShadow: {
         'nav': '0px 10px 10px 0px rgba(9, 5, 29, 0.171)',

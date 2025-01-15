@@ -26,14 +26,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ backgroundImage: 'var(--image-gradient)' }}
+      >
         <Navbar />
-        <div className="grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen p-2 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <div
+          className="grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]"
+          style={{ backgroundImage: 'var(--image-gradient),url(/home-bg.jpg)' }}
+        >
           <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start w-full">
             {children}
           </main>
-          <Footer />
         </div>
+        <Footer />
       </body>
     </html>
   );
