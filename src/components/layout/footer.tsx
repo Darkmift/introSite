@@ -1,10 +1,10 @@
 import React from 'react';
-import { AiFillGithub, AiOutlineTwitter, AiFillInstagram } from 'react-icons/ai';
+import { AiFillGithub } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
 
 function Footer() {
-  let date = new Date();
-  let year = date.getFullYear();
+  const date = new Date();
+  const year = date.getFullYear();
   return (
     <footer className="footer bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">
