@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-import { AiFillGithub, AiOutlineTwitter, AiFillInstagram } from 'react-icons/ai';
+import { AiFillGithub } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
 import Tilt from 'react-parallax-tilt';
 
@@ -25,7 +25,7 @@ export default function Home() {
                 </span>
               </h2>
               <h2 className="text-3xl md:text-4xl font-bold">
-                I'M
+                I&apos;M
                 <strong className="text-[#be6adf] ml-2">AVI E. Koenig</strong>
               </h2>
               <h2 className="mt-8 text-[#be6adf] text-[35px] md:text-[30px] font-bold">
@@ -98,7 +98,7 @@ export default function Home() {
             {/* Right Column */}
             <div className="md:w-4/12 flex justify-center">
               <Tilt>
-                <img src={'./avatar.svg'} alt="avatar" className="rounded-lg shadow-lg" />
+                <Image src={'./avatar.svg'} alt="avatar" className="rounded-lg shadow-lg" />
               </Tilt>
             </div>
           </div>

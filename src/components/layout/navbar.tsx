@@ -11,10 +11,11 @@ import {
 import { CgFileDocument, CgGitFork } from 'react-icons/cg';
 import { ImBlog } from 'react-icons/im';
 import Image from 'next/image';
+import { IconType } from 'react-icons';
 
 type Props = {
   href: string;
-  icon: any;
+  icon: IconType;
   children: React.ReactNode;
   external?: boolean;
   onClick?: () => void;
@@ -31,7 +32,7 @@ const Li = ({ href, icon: Icon, children, external, onClick }: Props) => {
         className="font-medium text-white transition-all duration-300 relative z-10 hover:text-yellow-500"
         onClick={onClick}
       >
-        <span className='flex items-center'>
+        <span className="flex items-center">
           <Icon className="inline-block mr-2" />
           {children}
         </span>
@@ -63,12 +64,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-2">
         <Link href="/" className="flex items-center">
-          <Image
-            src={`/logo.png`}
-            width={60}
-            height={30}
-            alt="Brand Logo"
-          />
+          <Image src={`/logo.png`} width={60} height={30} alt="Brand Logo" />
         </Link>
         <button className="text-white md:hidden" onClick={() => setExpanded(!expanded)}>
           <span className="block w-6 h-0.5 bg-white mb-1"></span>
