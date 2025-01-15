@@ -7,7 +7,13 @@ const meta = {
   parameters: {
     layout: 'fullscreen',
   },
-  decorators: [(Story) => <Story />],
+  decorators: [
+    (Story) => (
+      <body>
+        <Story />
+      </body>
+    ),
+  ],
 } as Meta<typeof HomePage>;
 
 export default meta;

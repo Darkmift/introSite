@@ -1,4 +1,6 @@
-import { useCallback, useEffect, useState } from 'react';
+'use client';
+
+import { useEffect, useState } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 // import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
@@ -33,76 +35,65 @@ const MyParticles = () => {
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={{
-          background: {
-            color: {
-              value: '#0d47a1',
+          fpsLimit: 80,
+          detectRetina: true,
+          particles: {
+            number: {
+              value: 160,
+              density: {
+                enable: true,
+                width: 1500,
+              },
+            },
+            line_linked: {
+              enable: false,
+              opacity: 0.03,
+            },
+            move: {
+              direction: 'right',
+              speed: 0.05,
+            },
+            size: {
+              value: 1,
+            },
+            opacity: {
+              value: 0.5,
+
+              animation: {
+                count: 0, // Number of times the animation repeats; 0 means infinite
+                decay: {
+                  max: 0.1,
+                  min: 0.5,
+                }, // Decay factor to slow down the animation over time
+                delay: {
+                  max: 0.1,
+                  min: 0.5,
+                }, // Delay before the animation starts
+                enable: true, // Enable or disable the animation
+                speed: {
+                  max: 0.1,
+                  min: 0.5,
+                }, // Speed of the animation
+                sync: false, // If true, animations are synchronized; if false, animations are independent
+                mode: 'auto', // Animation mode (must match a valid value from AnimationMode)
+                startValue: 'random', // Starting value type (must match a valid value from StartValueType)
+              },
             },
           },
-          fpsLimit: 120,
           interactivity: {
             events: {
               onClick: {
                 enable: true,
                 mode: 'push',
               },
-              onHover: {
-                enable: true,
-                mode: 'repulse',
-              },
-              resize: {
-                enable: true,
-              },
             },
             modes: {
               push: {
-                quantity: 4,
-              },
-              repulse: {
-                distance: 200,
-                duration: 0.4,
+                particles_nb: 1,
               },
             },
           },
-          particles: {
-            color: {
-              value: '#ffffff',
-            },
-            links: {
-              color: '#ffffff',
-              distance: 150,
-              enable: true,
-              opacity: 0.5,
-              width: 1,
-            },
-            move: {
-              direction: 'none',
-              enable: true,
-              outModes: {
-                default: 'bounce',
-              },
-              random: false,
-              speed: 6,
-              straight: false,
-            },
-            number: {
-              density: {
-                enable: true,
-                height: 800,
-                width: 800,
-              },
-              value: 80,
-            },
-            opacity: {
-              value: 0.5,
-            },
-            shape: {
-              type: 'circle',
-            },
-            size: {
-              value: { min: 1, max: 5 },
-            },
-          },
-          detectRetina: true,
+          retina_detect: true,
         }}
       />
     )
