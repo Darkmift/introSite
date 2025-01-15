@@ -31,11 +31,6 @@ const icons = [
 const Professional = () => {
   return (
     <div className="w-full max-w-6xl mx-auto px-4">
-      <h1 className="text-4xl font-bold text-center mb-12">
-        <span className="text-black dark:text-white">Professional</span>&nbsp;
-        <span className="text-primary-purple">Skillset</span>
-      </h1>
-
       <div className="flex flex-wrap justify-center">
         {icons.map(({ Icon, id }) => (
           <div key={id}>

@@ -3,8 +3,8 @@ import GitHubCalendar from 'react-github-calendar';
 import { ThemeInput } from 'react-activity-calendar';
 
 const explicitTheme: ThemeInput = {
-  light: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259'],
-  dark: ['#383838', '#4D455D', '#7DB9B6', '#F5E9CF', '#E96479'],
+  light: ['#212529', '#6f42c1', '#6829db', '#6610f2', '#5913db'],
+  dark: ['#212529', '#6f42c1', '#6829db', '#6610f2', '#5913db'],
 };
 
 const Calendar = () => (

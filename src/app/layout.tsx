@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Footer from '@/components/layout/footer';
 import Navbar from '@/components/layout/navbar';
+import MyParticles from '@/components/ui/particles';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -30,10 +31,17 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{ backgroundImage: 'var(--image-gradient)' }}
       >
+        <MyParticles />
         <Navbar />
         <div
           className="grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]"
-          style={{ backgroundImage: 'var(--image-gradient),url(/home-bg.jpg)' }}
+          style={{
+            backgroundImage: 'var(--image-gradient),url(/home-bg.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            minHeight: '100%', // Ensures it covers the content height
+          }}
         >
           <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start w-full">
             {children}

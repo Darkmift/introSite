@@ -2,14 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import {
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-  AiFillStar,
-} from 'react-icons/ai';
-import { CgFileDocument, CgGitFork } from 'react-icons/cg';
-import { ImBlog } from 'react-icons/im';
+import { AiOutlineHome, AiOutlineUser, AiFillStar } from 'react-icons/ai';
+import { CgGitFork } from 'react-icons/cg';
 import Image from 'next/image';
 import { IconType } from 'react-icons';
 
@@ -83,7 +77,7 @@ const Navbar = () => {
             <Li href="/about" icon={AiOutlineUser} onClick={() => setExpanded(false)}>
               About
             </Li>
-            <Li
+            {/* <Li
               href="/project"
               icon={AiOutlineFundProjectionScreen}
               onClick={() => setExpanded(false)}
@@ -92,13 +86,13 @@ const Navbar = () => {
             </Li>
             <Li href="/resume" icon={CgFileDocument} onClick={() => setExpanded(false)}>
               Resume
-            </Li>
+            </Li> 
             <Li href="https://soumyajit.tech/" icon={ImBlog} external>
               Blogs
-            </Li>
+            </Li> */}
             <li className="relative ml-5">
               <a
-                href="https://github.com/soumyajit4419/Portfolio"
+                href="https://github.com/Darkmift"
                 target="_blank"
                 rel="noreferrer"
                 className="bg-[#623686] border border-transparent rounded-md text-white cursor-pointer text-base font-normal leading-6 px-3 py-1.5 text-center no-underline transition duration-150 ease-in-out transform hover:scale-110 hover:text-yellow-500 flex items-center"

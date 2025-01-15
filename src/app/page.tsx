@@ -5,17 +5,19 @@ import Image from 'next/image';
 import { AiFillGithub } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
 import Tilt from 'react-parallax-tilt';
-
-import MyParticles from '@/components/ui/particles';
 import TypeWritterWrapper from '@/components/ui/typewriter';
 
 export default function Home() {
   return (
     <div className="home-page flex flex-col w-[70vw] mx-auto home-section">
-      <MyParticles />
       <section className="text-white flex items-start">
         <div className="container px-4">
-          <div className="flex items-center justify-between text-xl">
+          <div className="flex flex-col md:flex-row items-center justify-between text-xl">
+            {/* Right Section */}
+            <div className="flex justify-center md:py-[15vh]">
+              <Image src={'./home-main.svg'} alt="home pic" height={350} width={350} priority />
+            </div>
+
             {/* Left Section */}
             <div className="home-header flex flex-col gap-3">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -28,8 +30,7 @@ export default function Home() {
                 I&apos;M
                 <strong className="text-[#be6adf] ml-2">AVI E. Koenig</strong>
               </h2>
-              <h2 className="mt-8 text-[#be6adf] text-[35px] md:text-[30px] font-bold">
-                &nbsp;
+              <h2 className="mt-8 text-[#be6adf] text-[35px] md:text-[30px] font-bold h-10 w-10">
                 <TypeWritterWrapper
                   options={{
                     words: [
@@ -47,11 +48,6 @@ export default function Home() {
                   }}
                 />
               </h2>
-            </div>
-
-            {/* Right Section */}
-            <div className="flex justify-center md:justify-end">
-              <Image src={'./home-main.svg'} alt="home pic" height={350} width={350} priority />
             </div>
           </div>
         </div>
