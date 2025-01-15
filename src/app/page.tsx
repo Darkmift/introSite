@@ -98,7 +98,13 @@ export default function Home() {
             {/* Right Column */}
             <div className="md:w-4/12 flex justify-center">
               <Tilt>
-                <Image src={'./avatar.svg'} alt="avatar" className="rounded-lg shadow-lg" />
+                <Image
+                  src={'./avatar.svg'}
+                  alt="avatar"
+                  width={200}
+                  height={200}
+                  className="rounded-lg shadow-lg"
+                />
               </Tilt>
             </div>
           </div>
@@ -115,9 +121,9 @@ export default function Home() {
                   href="https://github.com/Darkmift"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-purple-500 rounded-full p-3 hover:bg-purple-500 hover:text-white transition"
+                  className="text-purple-500 p-3  hover:bg-purple-500 hover:text-white transition"
                 >
-                  <AiFillGithub size={25} />
+                  <AiFillGithub size={45} />
                 </a>
               </li>
               <li>
@@ -125,9 +131,9 @@ export default function Home() {
                   href="https://www.linkedin.com/in/avi-koenig/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-purple-500 rounded-full p-3 hover:bg-purple-500 hover:text-white transition"
+                  className="text-purple-500 p-3 hover:bg-purple-500 hover:text-white transition"
                 >
-                  <FaLinkedinIn size={25} />
+                  <FaLinkedinIn size={45} />
                 </a>
               </li>
             </ul>
