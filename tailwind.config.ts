@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { typewindTransforms } from 'typewind/transform'
 
 // Define animation keyframes
 const animations = {
@@ -50,11 +51,14 @@ const animations = {
 };
 
 const config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: {
+    files: [
+      "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+      "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+      "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    ],
+    transform: typewindTransforms
+  },
   theme: {
     extend: {
       colors: {
@@ -138,7 +142,9 @@ const config = {
       ...animations,
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/container-queries')
+  ],
 } satisfies Config;
 
 export default config;
