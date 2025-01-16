@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { tw } from 'typewind';
 
 import { AiFillGithub } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
@@ -8,8 +9,9 @@ import Tilt from 'react-parallax-tilt';
 import TypeWritterWrapper from '@/components/ui/typewriter';
 
 export default function Home() {
+  const x = '"home-page flex flex-col w-[70vw] mx-auto home-section"';
   return (
-    <div className="home-page flex flex-col w-[70vw] mx-auto home-section">
+    <div className={'home-page home-section' + tw.flex.flex_col.mx_auto.w_['70vw']}>
       <section className="text-white flex items-start">
         <div className="container px-4">
           <div className="flex flex-col md:flex-row items-center justify-between text-xl">
