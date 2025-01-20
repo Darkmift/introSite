@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { AiOutlineHome, AiOutlineUser, AiFillStar } from 'react-icons/ai';
-import { CgGitFork } from 'react-icons/cg';
+import { CgGitFork, CgFileDocument } from 'react-icons/cg';
 import Image from 'next/image';
 import { IconType } from 'react-icons';
 
@@ -77,6 +77,9 @@ const Navbar = () => {
             <Li href="/about" icon={AiOutlineUser} onClick={() => setExpanded(false)}>
               About
             </Li>
+            <Li href="/resume" icon={CgFileDocument} onClick={() => setExpanded(false)}>
+              Resume
+            </Li>
             {/* <Li
               href="/project"
               icon={AiOutlineFundProjectionScreen}
@@ -84,9 +87,6 @@ const Navbar = () => {
             >
               Projects
             </Li>
-            <Li href="/resume" icon={CgFileDocument} onClick={() => setExpanded(false)}>
-              Resume
-            </Li> 
             <Li href="https://soumyajit.tech/" icon={ImBlog} external>
               Blogs
             </Li> */}
