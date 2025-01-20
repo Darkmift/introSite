@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
-export async function GET(_: NextRequest, res: NextResponse) {
+export async function GET() {
   try {
     return NextResponse.json(
       { pdfUrl: "https://drive.google.com/uc?export=download&id=17iOQ6aG6g3NHdZFl9iUZ1PjIBQYOIjsL" },

@@ -26,13 +26,6 @@ function Resume() {
     setNumPages(numPages); // Set the total number of pages in the state
   };
 
-  // Calculate the scale dynamically based on the screen width
-  const calculateScale = () => {
-    if (width > 1200) return 2; // Large screens
-    if (width > 768) return 1.5; // Medium screens
-    return 1; // Small screens
-  };
-
   return (
     <div className="home-page flex flex-col w-[70vw] min-h-[90vh] mx-auto home-section">
       <section className="about-section text-white">
